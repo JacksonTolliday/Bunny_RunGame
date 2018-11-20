@@ -12,26 +12,17 @@ unknown to the user. The functional specification should include sections with t
 
 Your specification **should include** the following types of information:
 
-* A title. Replace the title at the beginning of this document. *YEP, DONE*
-* Summary or introduction. In general, in a few lines or less, what is your program about or what is it about?
-     *In this game, you play as one of the knights of Camelot, and you must escape the Killer Rabbit of Caerbannog.*
-* How does the user access your program? Is it shared via https://runpython.org? Is a web site? Embedded in 
-  a single board computer? 
-     *This was programmed with https://runpython.org.*
-* If there are graphics screens involved, describe every screen that the user will experience: what is it for? 
-  What did the user have to do to get there and how does she move on to the next?
-     *The game directly starts, there is no enter game screen, and you must move your character to an exit on the screen. The rabbit will follow, and try to catch up to the player. The goal of the game is to esacpe the Killer Rabbit of Caerbannog for as long as possible.*
+* In this game, you play as one of the knights of Camelot, and you must escape the Killer Rabbit of Caerbannog. This is loosely based off of the scene from Monty Python and the Holy Grail.
+* This game was programmed with https://runpython.org.
+* The game directly starts, and there is no enter game screen. You must move your character to try to escape the rabbit. The rabbit will follow, and try to catch up to the player. The goal of the game is to esacpe the Killer Rabbit of Caerbannog for as long as possible.
 * For each graphics screen, describe every active control input and what it does. What elements on the screen will
   change in response to user input?
      *The knight of Camelot will respond to key input (w,a,s,d) to move up, down, left, or right.*
 * Does the program respond to mouse input? What, exactly, does the mouse do?
      *This program does not respond to mouse input.*
-* Does the program respond to keyboard input? How?
-     *The knight of Camelot will respond to key input (w,a,s,d) to move up, down, left, or right.*
-* What graphical assets will be used?
-     *There will be at least one set of image sprites for the knight of Camelot, there will be background sprites, and there will be a set of sprites for the Killer Rabbit of Caerbannog. These can be found under the image
-* Does the user have to do anything to install the program?
-     *No.*
+* The knight of Camelot will respond to key input (w,a,s,d) to move up, down, left, or right through the sprites.
+* There will be at least one set of image sprites for the knight of Camelot, there will be background sprites, and there will be a set of sprites for the Killer Rabbit of Caerbannog. These can be found under the images folder in this program.
+* The user doesn't have to do anything to install the program, because it is run off of https://runpython.org.
 
 Your specification should **not** include the following types of information:
 
