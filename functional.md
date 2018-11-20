@@ -14,7 +14,7 @@ Your specification **should include** the following types of information:
 
 * A title. Replace the title at the beginning of this document. **YEP, DONE**
 * Summary or introduction. In general, in a few lines or less, what is your program about or what is it about?
-** In this game, you play as one of the knights of Camelot, and you must escape the Killer Rabbit of Caerbannog.
+     *In this game, you play as one of the knights of Camelot, and you must escape the Killer Rabbit of Caerbannog.*
 * How does the user access your program? Is it shared via https://runpython.org? Is a web site? Embedded in 
   a single board computer? 
 * If there are graphics screens involved, describe every screen that the user will experience: what is it for? 
