@@ -13,6 +13,7 @@ unknown to the user. The functional specification should include sections with t
 Your specification **should include** the following types of information:
 
 * A title. Replace the title at the beginning of this document.
+
 yep
 * Summary or introduction. In general, in a few lines or less, what is your program about or what is it about?
 * How does the user access your program? Is it shared via https://runpython.org? Is a web site? Embedded in 
