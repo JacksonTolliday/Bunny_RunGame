@@ -7,8 +7,8 @@ with inputs and outputs from the program, or the *experience* of a user running 
 
 The design specification should include information like:
 
-* What tools or frameworks will you use to build the project (e.g. https://runpython.org or ggame)?
-* What language will you use for coding (usually Python 3)?
+* I will use https://runpython.org and ggame together to create this program.
+* I will use the computer language Python 3 in order to code this program.
 * For every element of the Functional Specification, what code will need to be written to support it?
 * What data will be stored or manipulated by the program? How will it be encoded and organized?
 * Describe the logic and/or code behind every interaction with the user, and behind everything displayed.
