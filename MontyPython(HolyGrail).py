@@ -8,7 +8,7 @@ class Rabbit(Sprite):
         Frame(25,217,35,32), 8, 'horizontal')
 
     def __init__(self, position):
-        super().__init__(SpaceShip.asset, position)
+        super().__init__(Rabbit.asset, position)
         self.setImage(0)
         self.setImage(1)
         self.setImage(2)
