@@ -4,13 +4,16 @@ class Person(Sprite):
     """
     
     """
-    asset = ImageAsset("images/platformer_sprites_base.png",
+    rightasset = ImageAsset("images/platformer_sprites_base.png",
         Frame(227,0,65,125), 8, 'horizontal')
 
+    leftasset = ImageAsset("images/platformer_sprites_base.png",
+        Frame(227,0,65,125), 8, 'horizontal')
+    
     def __init__(self, position):
         super().__init__(Person.asset, position)
-        self.vx = 0
-        self.vy = 0
+        self.vl = 0
+        self.vr = 0
         Game.listenKeyEvent("keydown", "space", self.bigjump)
         Game.listenKeyEvent("keydown", "w", self.jump)
         Game.listenKeyEvent("keydown", "a", self.left)
@@ -24,10 +27,10 @@ class Person(Sprite):
         
 
     def left(self, event):
-        
+        self.vl += 1
         
     def right(self, event):
-        self.rotation = 0
+        self.vr += 1
 
     def jump(self, event):
         self.thrust = 1
