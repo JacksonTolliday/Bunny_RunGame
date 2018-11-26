@@ -7,13 +7,12 @@ class Rabbit(Sprite):
 
     def __init__(self, position):
         super().__init__(SpaceShip.asset, position)
-        self.vx = 1
-        self.vy = 1
-        self.vr = 0.01
-        SpaceGame.listenKeyEvent("keydown", "space", self.thrustOn)
-        SpaceGame.listenKeyEvent("keyup", "space", self.thrustOff)
-        SpaceGame.listenKeyEvent("keydown", "a", self.rotl)
-        SpaceGame.listenKeyEvent("keydown", "d", self.rotr)
-        self.fxcenter = self.fycenter = 0.5
-        self.thrust = 0
-        self.thrustframe = 1
+        self.setImage(0)
+        self.setImage(1)
+        self.setImage(2)
+        self.setImage(3)
+        self.setImage(4)
+        self.setImage(5)
+        self.setImage(6)
+        self.setImage(7)
+        
