@@ -17,4 +17,4 @@ class Rabbit(Sprite):
         self.setImage(5)
         self.setImage(6)
         self.setImage(7)
-        
+        Rabbit((100,100))
