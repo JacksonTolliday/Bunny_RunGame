@@ -5,17 +5,32 @@ class Person(Sprite):
     
     """
     asset = ImageAsset("images/platformer_sprites_base.png",
-        Frame(227,0,65,125), 4, 'vertical')
+        Frame(227,0,65,125), 8, 'horizontal')
 
     def __init__(self, position):
         super().__init__(Person.asset, position)
-        self.vx = 1
-        self.vy = 1
-        self.vr = 0.01
-        SpaceGame.listenKeyEvent("keydown", "space", self.thrustOn)
-        SpaceGame.listenKeyEvent("keyup", "space", self.thrustOff)
-        SpaceGame.listenKeyEvent("keydown", "a", self.rotl)
-        SpaceGame.listenKeyEvent("keydown", "d", self.rotr)
+        self.vx = 0
+        self.vy = 0
+        Game.listenKeyEvent("keydown", "space", self.bigjump)
+        Game.listenKeyEvent("keydown", "w", self.jump)
+        Game.listenKeyEvent("keydown", "a", self.left)
+        Game.listenKeyEvent("keydown", "d", self.right)
+        Game.listenKeyEvent("keydown", "s", self.slow)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
-        self.thrustframe = 1
+
+
+    def step(self):
+        
+
+    def left(self, event):
+        
+        
+    def right(self, event):
+        self.rotation = 0
+
+    def jump(self, event):
+        self.thrust = 1
+        
+    def bigjump(self, event):
+        self.thrust = 2
