@@ -1,3 +1,5 @@
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+
 class Rabbit(Sprite):
     """
     Animated space ship
