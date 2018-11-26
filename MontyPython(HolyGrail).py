@@ -8,7 +8,7 @@ class Person(Sprite):
         Frame(227,0,65,125), 4, 'vertical')
 
     def __init__(self, position):
-        super().__init__(SpaceShip.asset, position)
+        super().__init__(Person.asset, position)
         self.vx = 1
         self.vy = 1
         self.vr = 0.01
