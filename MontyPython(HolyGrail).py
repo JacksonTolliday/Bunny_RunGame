@@ -24,7 +24,8 @@ class Person(Sprite):
 
 
     def step(self):
-        
+        self.x += self.vr
+        self.x -= self.vl
 
     def left(self, event):
         self.vl += 1
