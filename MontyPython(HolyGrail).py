@@ -21,6 +21,7 @@ class Person(Sprite):
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
         self.animater = 0
+        self.animater = 16
 
 
     def step(self):
@@ -36,6 +37,12 @@ class Person(Sprite):
             self.animater += 1
             if self.animater == 8:
                 self.animater = 0
+        if self.tv < 0:
+            self.setImage(16)
+            self.setImage(self.animater)
+            self.animater -= 1
+            if self.animater == 8:
+                self.animater = 16
         
 
     def left(self, event):
