@@ -18,6 +18,7 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "w", self.jump)
         Game.listenKeyEvent("keydown", "a", self.left)
         Game.listenKeyEvent("keydown", "d", self.right)
+        Game.listenKeyEvent("keydown", "s", self.drop)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
         self.anim = 0
@@ -45,6 +46,9 @@ class Person(Sprite):
     
     def jump(self, event):
         self.thrust = 1
+
+    def drop(self, event):
+        self.thrust = -1
 
 class Game(App):
     """
