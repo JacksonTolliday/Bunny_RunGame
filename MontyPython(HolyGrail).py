@@ -4,14 +4,13 @@ class Person(Sprite):
     """
     
     """
-    rightasset = ImageAsset("images/platformer_sprites_base.png",
+    asset = ImageAsset("images/platformer_sprites_base.png",
         Frame(0, 0, 64, 64), 8, 'horizontal')
-
-    leftasset = ImageAsset("images/platformer_sprites_base -left.png",
+    asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 0, 64, 64), 8, 'horizontal')
     
     def __init__(self, position):
-        super().__init__(Person.rightasset, position)
+        super().__init__(Person.asset, position)
         self.vl = 0
         self.vr = 0
         self.tv = 0
@@ -21,20 +20,22 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "s", self.drop)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
-        self.animate = 0
+        self.animater = 0
 
 
     def step(self):
-        self.setImage(self.animate)
-        self.animate += 1
-        if self.animate == 8:
-            self.animate = 0
         self.tv = self.vr - self.vl
         if self.tv > 6:
             self.tv = 6
         if self.tv < -6:
             self.tv = -6
         self.x += self.tv
+        if self.tv > 0:
+            self.setImage(0)
+            self.setImage(self.animater)
+            self.animater += 1
+            if self.animater == 8:
+                self.animater = 0
         
 
     def left(self, event):
