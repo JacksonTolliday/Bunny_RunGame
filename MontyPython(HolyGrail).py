@@ -25,12 +25,10 @@ class Person(Sprite):
 
 
     def step(self):
-        print('step')
-        if self.animate == 1:
-            self.setImage(self.animate)
-            self.animate += 1
-            if self.animate == 8:
-                self.animate = 0
+        self.setImage(self.animate)
+        self.animate += 1
+        if self.animate == 8:
+            self.animate = 0
         self.tv = self.vr - self.vl
         if self.tv > 6:
             self.tv = 6
