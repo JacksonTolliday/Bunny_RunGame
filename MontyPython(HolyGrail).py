@@ -20,12 +20,10 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "d", self.right)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
-        trialcycle = 0
 
 
     def step(self):
-        trialcycle += 1
-        self.setImage(trialcycle)
+        self.setImage(+ 1)
         '''self.tv = self.vr - self.vl
         self.x += self.tv'''
         
