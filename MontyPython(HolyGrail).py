@@ -43,6 +43,8 @@ class Person(Sprite):
             self.animater -= 1
             if self.animater == 8:
                 self.animater = 16
+        else:
+            pass
         
 
     def left(self, event):
