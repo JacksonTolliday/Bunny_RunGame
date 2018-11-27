@@ -24,10 +24,11 @@ class Person(Sprite):
 
 
     def step(self):
-        if trialcycle < 8:
-            trialcycle += 1
+        '''if trialcycle < 8:
+            pass
         else:
-            trialcycle -= 8
+            trialcycle -= 8'''
+        trialcycle += 1
         self.setImage(trialcycle)
         self.tv = self.vr - self.vl
         self.x += self.tv
