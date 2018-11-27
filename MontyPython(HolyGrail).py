@@ -17,7 +17,6 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "w", self.jump)
         Game.listenKeyEvent("keydown", "a", self.left)
         Game.listenKeyEvent("keydown", "d", self.right)
-        Game.listenKeyEvent("keydown", "s", self.slow)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
 
@@ -32,7 +31,7 @@ class Person(Sprite):
         
     def right(self, event):
         self.vr += 1
-
+    
     def jump(self, event):
         self.thrust = 1
 
