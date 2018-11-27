@@ -29,8 +29,12 @@ class Person(Sprite):
             self.anim += 1
             if self.anim == 8:
                 self.anim = 0
-        '''self.tv = self.vr - self.vl
-        self.x += self.tv'''
+        self.tv = self.vr - self.vl
+        if self.tv > 6:
+            self.tv = 6
+        if self.tv < -6:
+            self.tv = -6
+        self.x += self.tv
         
 
     def left(self, event):
