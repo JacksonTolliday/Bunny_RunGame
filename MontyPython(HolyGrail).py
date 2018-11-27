@@ -21,15 +21,15 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "s", self.drop)
         self.fxcenter = self.fycenter = 0.5
         self.thrust = 0
-        self.anim = 0
+        self.animate = 0
 
 
     def step(self):
-        if self.anim == 1:
-            self.setImage(self.anim)
-            self.anim += 1
-            if self.anim == 8:
-                self.anim = 0
+        if self.animate == 1:
+            self.setImage(self.animate)
+            self.animate += 1
+            if self.animate == 8:
+                self.animate = 0
         self.tv = self.vr - self.vl
         if self.tv > 6:
             self.tv = 6
