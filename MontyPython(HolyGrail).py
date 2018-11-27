@@ -31,6 +31,7 @@ class Person(Sprite):
         if self.tv < -6:
             self.tv = -6
         self.x += self.tv
+        print('step')
         if self.tv > 0:
             self.setImage(0)
             self.setImage(self.animater)
