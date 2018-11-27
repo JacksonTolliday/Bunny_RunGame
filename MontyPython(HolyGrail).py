@@ -36,7 +36,7 @@ class Person(Sprite):
     def jump(self, event):
         self.thrust = 1
 
-class SpaceGame(App):
+class Game(App):
     """
     Tutorial4 space game example.
     """
@@ -55,5 +55,5 @@ class SpaceGame(App):
             player.step()
 
 
-myapp = SpaceGame()
+myapp = Game()
 myapp.run()
