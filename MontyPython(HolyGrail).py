@@ -23,7 +23,7 @@ class Person(Sprite):
 
 
     def step(self):
-        self.setImage(+ 1)
+        self.setImage() = self.setImage(+1)
         '''self.tv = self.vr - self.vl
         self.x += self.tv'''
         
