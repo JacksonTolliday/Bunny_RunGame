@@ -25,6 +25,7 @@ class Person(Sprite):
 
 
     def step(self):
+        print('step')
         if self.animate == 1:
             self.setImage(self.animate)
             self.animate += 1
