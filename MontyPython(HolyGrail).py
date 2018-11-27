@@ -14,6 +14,7 @@ class Person(Sprite):
         super().__init__(Person.rightasset, position)
         self.vl = 0
         self.vr = 0
+        self.tv = 0
         Game.listenKeyEvent("keydown", "w", self.jump)
         Game.listenKeyEvent("keydown", "a", self.left)
         Game.listenKeyEvent("keydown", "d", self.right)
@@ -22,8 +23,8 @@ class Person(Sprite):
 
 
     def step(self):
-        self.x += self.vr
-        self.x -= self.vl
+        self.tv = self.vr + self.vl
+        
         
 
     def left(self, event):
