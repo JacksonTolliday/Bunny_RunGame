@@ -15,7 +15,11 @@ class Person(Sprite):
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 0, 64, 64), 4, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
-        Frame(256, 64, 64, 64), 4, 'horizontal')
+        Frame(256, 64, 64, 64), 1, 'horizontal')
+    asset.append("images/platformer_sprites_base.png",
+        Frame(0, 512, 64, 64), 1, 'horizontal')
+    asset.append("images/platformer_sprites_base.png",
+        Frame(512, 512, 64, 64), 1, 'horizontal')
     def __init__(self, position):
         super().__init__(Person.asset, position)
         self.vl = 0
@@ -44,6 +48,13 @@ class Person(Sprite):
         self.tvlist.append(self.tv)
         print(self.tv)
         if self.vertmov == 0:
+            if self.tv == 0:
+                if self.tvlist[(len(self.tvlist))-1] < 0:
+                    self.setImage()
+                if self.tvlist[(len(self.tvlist))-1] > 0:
+                    self.setImage()
+                else:
+                    pass
             if self.tv > 0:
                 if self.tv < 4:
                     self.setImage(0)
