@@ -30,6 +30,7 @@ class Person(Sprite):
         self.animater = 0
         self.animatel = 15
         self.animaterr = 16
+        self.animatelr = 31
 
 
     def step(self):
@@ -61,11 +62,11 @@ class Person(Sprite):
                 if self.animatel == 7:
                     self.animatel = 15
         if self.tv < -3:
-            self.setImage(16)
-            self.setImage(self.animaterr)
-            self.animaterr += 0.25
-            if self.animaterr == 23:
-                self.animaterr = 16
+            self.setImage(31)
+            self.setImage(self.animaterlr)
+            self.animatelr -= 0.25
+            if self.animatelr == 24:
+                self.animatelr = 31
         else:
             pass
         
