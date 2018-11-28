@@ -31,6 +31,7 @@ class Person(Sprite):
         self.animatel = 15
         self.animaterr = 16
         self.animatelr = 31
+        self.tvlist = []
 
 
     def step(self):
@@ -40,7 +41,8 @@ class Person(Sprite):
         if self.tv < -6:
             self.tv = -6
         self.x += self.tv
-        print(len(Person.asset))
+        self.tvlist.append(self.tv)
+        print(self.tv)
         if self.vertmov == 0:
             if self.tv > 0:
                 if self.tv < 4:
