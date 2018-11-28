@@ -51,7 +51,7 @@ class Person(Sprite):
         if self.tv > 3:
             self.setImage(16)
             self.setImage(self.animaterr)
-            self.animaterr += 0.25
+            self.animaterr += 0.5
             if self.animaterr == 23:
                 self.animaterr = 16
         if self.tv < 0:
@@ -64,7 +64,7 @@ class Person(Sprite):
         if self.tv < -3:
             self.setImage(31)
             self.setImage(self.animatelr)
-            self.animatelr -= 0.25
+            self.animatelr -= 0.5
             if self.animatelr == 24:
                 self.animatelr = 31
         else:
