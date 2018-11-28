@@ -40,7 +40,7 @@ class Person(Sprite):
         if self.tv < -6:
             self.tv = -6
         self.x += self.tv
-        print('step')
+        print(len(Person.asset))
         if self.tv > 0:
             if self.tv < 4:
                 self.setImage(0)
@@ -62,7 +62,7 @@ class Person(Sprite):
                 if self.animatel == 7:
                     self.animatel = 15
         if self.tv < -3:
-            self.setImage(30)
+            self.setImage(31)
             self.setImage(self.animaterlr)
             self.animatelr -= 0.25
             if self.animatelr == 24:
