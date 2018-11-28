@@ -48,13 +48,13 @@ class Person(Sprite):
         self.tvlist.append(self.tv)
         print(self.tv)
         if self.vertmov == 0:
-            if self.tv == 0:
+            '''if self.tv == 0:
                 if self.tvlist[(len(self.tvlist))-1] < 0:
                     self.setImage(33)
                 if self.tvlist[(len(self.tvlist))-1] > 0:
                     self.setImage(32)
                 else:
-                    pass
+                    pass'''
             if self.tv > 0:
                 if self.tv < 4:
                     self.setImage(0)
