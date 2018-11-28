@@ -26,7 +26,7 @@ class Person(Sprite):
         Game.listenKeyEvent("keydown", "d", self.right)
         Game.listenKeyEvent("keydown", "s", self.drop)
         self.fxcenter = self.fycenter = 0.5
-        self.thrust = 0
+        self.vertmov = 0
         self.animater = 0
         self.animatel = 15
         self.animaterr = 16
@@ -41,32 +41,33 @@ class Person(Sprite):
             self.tv = -6
         self.x += self.tv
         print(len(Person.asset))
-        if self.tv > 0:
-            if self.tv < 4:
-                self.setImage(0)
-                self.setImage(self.animater)
-                self.animater += 0.25
-                if self.animater == 8:
-                    self.animater = 0
-        if self.tv > 3:
-            self.setImage(16)
-            self.setImage(self.animaterr)
-            self.animaterr += 0.25
-            if self.animaterr == 23:
-                self.animaterr = 16
-        if self.tv < 0:
-            if self.tv > -4:
-                self.setImage(15)
-                self.setImage(self.animatel)
-                self.animatel -= 0.25
-                if self.animatel == 7:
-                    self.animatel = 15
-        if self.tv < -3:
-            self.setImage(31)
-            self.setImage(self.animatelr)
-            self.animatelr -= 0.25
-            if self.animatelr == 24:
-                self.animatelr = 31
+        if self.vertmov == 0:
+            if self.tv > 0:
+                if self.tv < 4:
+                    self.setImage(0)
+                    self.setImage(self.animater)
+                    self.animater += 0.25
+                    if self.animater == 8:
+                        self.animater = 0
+            if self.tv > 3:
+                self.setImage(16)
+                self.setImage(self.animaterr)
+                self.animaterr += 0.25
+                if self.animaterr == 23:
+                    self.animaterr = 16
+            if self.tv < 0:
+                if self.tv > -4:
+                    self.setImage(15)
+                    self.setImage(self.animatel)
+                    self.animatel -= 0.25
+                    if self.animatel == 7:
+                        self.animatel = 15
+            if self.tv < -3:
+                self.setImage(31)
+                self.setImage(self.animatelr)
+                self.animatelr -= 0.25
+                if self.animatelr == 24:
+                    self.animatelr = 31
         else:
             pass
         
