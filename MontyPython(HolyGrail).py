@@ -42,7 +42,7 @@ class Person(Sprite):
         self.x += self.tv
         print('step')
         if self.tv > 0:
-            if self.tv < 3:
+            if self.tv < 4:
                 self.setImage(0)
                 self.setImage(self.animater)
                 self.animater += 0.25
