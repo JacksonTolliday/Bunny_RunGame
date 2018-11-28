@@ -5,9 +5,9 @@ class Person(Sprite):
     
     """
     asset = ImageAsset("images/platformer_sprites_base.png",
-        Frame(0, 0, 64, 64), 8, 'horizontal')
+        Frame(0, 256, 64, 64), 8, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
-        Frame(0, 0, 64, 64), 8, 'horizontal')
+        Frame(0, 256, 64, 64), 8, 'horizontal')
     
     def __init__(self, position):
         super().__init__(Person.asset, position)
