@@ -50,9 +50,9 @@ class Person(Sprite):
         if self.vertmov == 0:
             if self.tv == 0:
                 if self.tvlist[(len(self.tvlist))-1] < 0:
-                    self.setImage()
+                    self.setImage(33)
                 if self.tvlist[(len(self.tvlist))-1] > 0:
-                    self.setImage()
+                    self.setImage(32)
                 else:
                     pass
             if self.tv > 0:
