@@ -18,7 +18,7 @@ class Person(Sprite):
         Frame(256, 64, 64, 64), 1, 'horizontal')
     asset.append("images/platformer_sprites_base.png",
         Frame(0, 512, 64, 64), 1, 'horizontal')
-    asset.append("images/platformer_sprites_base.png",
+    asset.append("images/platformer_sprites_base -left.png",
         Frame(512, 512, 64, 64), 1, 'horizontal')
     def __init__(self, position):
         super().__init__(Person.asset, position)
