@@ -76,7 +76,7 @@ class Person(Sprite):
                 self.setImage(self.animatelr)
                 self.animatelr -= 0.10
                 print(self.animatelr)
-                if self.animatelr <= 24:
+                if self.animatelr <= 24.5:
                     self.animatelr = 29
         else:
             pass
