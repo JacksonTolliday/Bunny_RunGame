@@ -77,7 +77,7 @@ class Person(Sprite):
                 self.animatelr -= 0.05
                 print(self.animatelr)
                 if self.animatelr <= 24.25:
-                    self.animatelr = 28
+                    self.animatelr = 28.5
         else:
             pass
         
