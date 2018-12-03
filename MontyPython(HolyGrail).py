@@ -34,7 +34,7 @@ class Person(Sprite):
         self.animater = 0
         self.animatel = 15
         self.animaterr = 16
-        self.animatelr = 31
+        self.animatelr = 30
         self.tvlist = []
 
 
