@@ -69,13 +69,13 @@ class Person(Sprite):
             if self.tv < 0:
                 if self.tv > -3:
                     self.setImage(self.animatel)
-                    print(self.animatel)
                     self.animatel -= 0.25
                     if self.animatel <= 8:
                         self.animatel = 14
             if self.tv < -2:
                 self.setImage(self.animatelr)
                 self.animatelr -= 0.10
+                print(self.animatelr)
                 if self.animatelr <= 24:
                     self.animatelr = 30
         else:
