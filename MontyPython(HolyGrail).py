@@ -71,7 +71,7 @@ class Person(Sprite):
                     self.setImage(self.animatel)
                     self.animatel -= 0.25
                     if self.animatel == 7:
-                        self.animatel = 15
+                        self.animatel = 14
             if self.tv < -2:
                 self.setImage(self.animatelr)
                 self.animatelr -= 0.25
