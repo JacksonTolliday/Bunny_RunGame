@@ -15,7 +15,7 @@ class Person(Sprite):
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 0, 64, 64), 4, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
-        Frame(256, 64, 64, 64), 1, 'horizontal')
+        Frame(256, 64, 64, 64), 4, 'horizontal')
     asset.append("images/platformer_sprites_base.png",
         Frame(0, 512, 64, 64), 1, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
@@ -56,28 +56,28 @@ class Person(Sprite):
                 else:
                     pass'''
             if self.tv > 0:
-                if self.tv < 3:
+                if self.tv < 4:
                     self.setImage(self.animater)
                     self.animater += 0.25
                     if self.animater == 8:
                         self.animater = 0
-            if self.tv > 2:
+            if self.tv > 3:
                 self.setImage(self.animaterr)
                 self.animaterr += 0.25
                 if self.animaterr == 23:
                     self.animaterr = 16
             if self.tv < 0:
-                if self.tv > -3:
+                if self.tv > -4:
                     self.setImage(self.animatel)
                     self.animatel -= 0.25
                     if self.animatel <= 8:
                         self.animatel = 14
-            if self.tv < -2:
+            if self.tv < -3:
                 self.setImage(self.animatelr)
                 self.animatelr -= 0.25
                 print(self.animatelr)
                 if self.animatelr <= 24.25:
-                    self.animatelr = 28.5
+                    self.animatelr = 30.5
         else:
             pass
         
