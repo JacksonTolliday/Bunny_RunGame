@@ -34,9 +34,12 @@ class Person(Sprite):
         self.animater = 0
         self.animatel = 15
         self.animaterr = 16
-        self.animatelr = 29
+        self.animatelr = 30
+        self.animaterd = 0
+        self.animateld = 0
         self.tvlist = []
         self.setImage(32)
+        self.dead = False
 
     def step(self):
         self.tv = self.vr - self.vl
@@ -48,37 +51,43 @@ class Person(Sprite):
         self.y += self.vertmov
         self.tvlist.append(self.tv)
         if self.vertmov == 0:
-            if self.tv == 0:
-                if self.tvlist[(len(self.tvlist))-1] < 0:
+            if self.dead == False:
+                if self.tv == 0:
+                    if self.tvlist[(len(self.tvlist))-5] < 0:
+                        self.setImage(32)
+                    if self.tvlist[(len(self.tvlist))-5] > 0:
+                        self.setImage(31)
+                    else:
+                        pass
+                if self.tv > 0:
+                    if self.tv < 3:
+                        self.setImage(self.animater)
+                        self.animater += 0.25
+                        if self.animater == 8:
+                            self.animater = 0
+                if self.tv > 2:
+                    self.setImage(self.animaterr)
+                    self.animaterr += 0.25
+                    if self.animaterr == 23:
+                        self.animaterr = 16
+                if self.tv < 0:
+                    if self.tv > -3:
+                        self.setImage(self.animatel)
+                        self.animatel -= 0.25
+                        if self.animatel <= 8:
+                            self.animatel = 14
+                if self.tv < -2:
+                    self.setImage(self.animatelr)
+                    self.animatelr -= 0.25
+                    if self.animatelr <= 24.25:
+                        self.animatelr = 30.5
+            '''if self.dead == True:
+                if self.tvlist[(len(self.tvlist))-5] < 0:
                     self.setImage(32)
-                if self.tvlist[(len(self.tvlist))-1] > 0:
+                if self.tvlist[(len(self.tvlist))-5] > 0:
                     self.setImage(31)
                 else:
-                    pass
-            if self.tv > 0:
-                if self.tv < 3:
-                    self.setImage(self.animater)
-                    self.animater += 0.25
-                    if self.animater == 8:
-                        self.animater = 0
-            if self.tv > 2:
-                self.setImage(self.animaterr)
-                self.animaterr += 0.25
-                if self.animaterr == 23:
-                    self.animaterr = 16
-            if self.tv < 0:
-                if self.tv > -3:
-                    self.setImage(self.animatel)
-                    self.animatel -= 0.25
-                    if self.animatel <= 8:
-                        self.animatel = 14
-            if self.tv < -2:
-                self.setImage(self.animatelr)
-                self.animatelr -= 0.25
-                if self.animatelr <= 24.25:
-                    self.animatelr = 30.5
-        else:
-            pass
+                    pass'''
         
 
     def left(self, event):
@@ -92,6 +101,9 @@ class Person(Sprite):
 
     def drop(self, event):
         self.thrust = -1
+
+    def death(self, event):
+        self.dead = True
 
 class Game(App):
     """
