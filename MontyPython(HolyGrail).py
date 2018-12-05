@@ -106,7 +106,7 @@ class Game(App):
         pic_asset = ImageAsset("images/backgroundexperiment.png",
         Frame(0, 0, self.width, self.height), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
-        bg = Sprite(pic_asset, (0,0))
+        bg = Sprite(bg_asset, (0,0))
         Person((200,200))
 
 
