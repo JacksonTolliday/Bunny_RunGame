@@ -83,10 +83,10 @@ class Person(Sprite):
         
 
     def left(self, event):
-        self.vl += 1
+        self.vl += 2
         
     def right(self, event):
-        self.vr += 1
+        self.vr += 2
     
     def jump(self, event):
         self.thrust = 1
