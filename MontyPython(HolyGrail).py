@@ -103,8 +103,8 @@ class Game(App):
         # Background
         black = Color(0, 1)
         noline = LineStyle(0, black)
-        pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 920, 672), 1, 'horizontal')
-        pic_asset.scale = 10.0
+        pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
+        pic_asset.scale = 2.0
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
         bg = Sprite(pic_asset, (0,0))
         Person((200,200))
