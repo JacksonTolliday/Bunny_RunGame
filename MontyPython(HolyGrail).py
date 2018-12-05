@@ -36,7 +36,7 @@ class Person(Sprite):
         self.animaterr = 16
         self.animatelr = 29
         self.tvlist = []
-
+        self.setImage(32)
 
     def step(self):
         self.tv = self.vr - self.vl
