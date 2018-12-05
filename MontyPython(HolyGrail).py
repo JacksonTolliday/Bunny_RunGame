@@ -106,8 +106,8 @@ class Game(App):
         pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
         bg = Sprite(pic_asset, (0,0))
-        bg.scale = 2.0
-        Person((200,200))
+        bg.scale = 1.3
+        Person((200,500))
 
 
     def step(self):
