@@ -45,8 +45,8 @@ class Person(Sprite):
         if self.tv < -6:
             self.tv = -6
         self.x += self.tv
+        self.y += self.vertmov
         self.tvlist.append(self.tv)
-        print(self.tv)
         if self.vertmov == 0:
             if self.tv == 0:
                 if self.tvlist[(len(self.tvlist))-1] < 0:
@@ -75,7 +75,6 @@ class Person(Sprite):
             if self.tv < -2:
                 self.setImage(self.animatelr)
                 self.animatelr -= 0.25
-                print(self.animatelr)
                 if self.animatelr <= 24.25:
                     self.animatelr = 30.5
         else:
@@ -105,8 +104,8 @@ class Game(App):
         noline = LineStyle(0, black)
         pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
-        bg = Sprite(pic_asset, (-200,-200))
-        bg.scale = 1.3
+        bg = Sprite(pic_asset, (0,-235))
+        bg.scale = 1.2
         Person((200,400))
 
 
