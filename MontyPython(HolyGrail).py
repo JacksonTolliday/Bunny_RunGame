@@ -120,7 +120,7 @@ class Game(App):
         linpic_asset = ImageAsset("images/Game_Background_701.jpg", Frame(0, 0, 1280, 640), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
         bg = Sprite(linpic_asset, (-50,-235))
-        bg.scale = 1.2
+        bg.scale = 1
         Person((200,400))
 
 
