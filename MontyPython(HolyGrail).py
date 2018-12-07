@@ -128,8 +128,8 @@ class Game(App):
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
-            self.bg1.x += player.tv
-            self.bg2.x += player.tv
+            self.bg1.x -= player.tv
+            self.bg2.x -= player.tv
         
 myapp = Game()
 myapp.run()
