@@ -110,7 +110,7 @@ class Game(App):
     """
     Tutorial4 space game example.
     """
-    def __init__(self):
+    def __init__(self, position):
         super().__init__()
         # Background
         black = Color(0, 1)
