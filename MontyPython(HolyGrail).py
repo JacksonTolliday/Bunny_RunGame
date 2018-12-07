@@ -137,6 +137,8 @@ class Game(App):
                 self.bg1.x = -1152
             if self.bg2.x == (1152-Game.width):
                 self.bg1.x = 1152
+            if self.bg1.x == (1152-Game.width):
+                self.bg2.x = 1152
             
 myapp = Game()
 myapp.run()
