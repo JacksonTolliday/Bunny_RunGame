@@ -47,7 +47,6 @@ class Person(Sprite):
             self.tv = 6
         if self.tv < -6:
             self.tv = -6
-        self.x += self.tv
         self.y += self.vertmov
         self.tvlist.append(self.tv)
         if self.vertmov == 0:
@@ -119,15 +118,18 @@ class Game(App):
         pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
         linpic_asset = ImageAsset("images/Game_Background_701.jpg", Frame(0, 0, 1280, 640), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
-        bg = Sprite(linpic_asset, (0,0))
-        bg.scale = 0.9
+        bg1 = Sprite(linpic_asset, (0,-60))
+        bg2 = Sprite(linpic_asset, (1152,-60))
+        bg1.scale = 0.9
+        bg2.scale = 0.9
         Person((200,400))
 
 
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
-
-
+            bg1.x += player.tv
+            bg2.x += player.tv
+        
 myapp = Game()
 myapp.run()
