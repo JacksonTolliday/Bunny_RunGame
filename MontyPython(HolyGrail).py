@@ -120,8 +120,8 @@ class Game(App):
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
         self.bg1 = Sprite(linpic_asset, (0,-60))
         self.bg2 = Sprite(linpic_asset, (1152,-60))
-        bg1.scale = 0.9
-        bg2.scale = 0.9
+        self.bg1.scale = 0.9
+        self.bg2.scale = 0.9
         Person((200,400))
 
 
