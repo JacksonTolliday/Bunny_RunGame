@@ -122,6 +122,7 @@ class Game(App):
         self.bg2 = Sprite(linpic_asset, (1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
+        print(self.w)
         Person((200,400))
 
 
@@ -134,6 +135,6 @@ class Game(App):
                 self.bg2.x = -1152
             if self.bg2.x == 0:
                 self.bg1.x = -1152
-                
+            
 myapp = Game()
 myapp.run()
