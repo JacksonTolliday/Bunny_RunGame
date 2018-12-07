@@ -111,7 +111,7 @@ class Game(App):
     Tutorial4 space game example.
     """
     def __init__(self, position):
-        super().__init__()
+        super().__init__(position)
         # Background
         black = Color(0, 1)
         noline = LineStyle(0, black)
