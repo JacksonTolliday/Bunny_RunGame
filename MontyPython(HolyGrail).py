@@ -118,8 +118,8 @@ class Game(App):
         pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
         linpic_asset = ImageAsset("images/Game_Background_701.jpg", Frame(0, 0, 1280, 640), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
-        bg1 = Sprite(linpic_asset, (0,-60))
-        bg2 = Sprite(linpic_asset, (1152,-60))
+        self.bg1 = Sprite(linpic_asset, (0,-60))
+        self.bg2 = Sprite(linpic_asset, (1152,-60))
         bg1.scale = 0.9
         bg2.scale = 0.9
         Person((200,400))
@@ -128,8 +128,8 @@ class Game(App):
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
-            bg1.x += player.tv
-            bg2.x += player.tv
+            self.bg1.x += player.tv
+            self.bg2.x += player.tv
         
 myapp = Game()
 myapp.run()
