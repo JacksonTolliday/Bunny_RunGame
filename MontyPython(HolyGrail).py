@@ -110,16 +110,17 @@ class Game(App):
     """
     Tutorial4 space game example.
     """
+    linpic_asset = ImageAsset("images/Game_Background_701.jpg", Frame(0, 0, 1280, 640), 1, 'horizontal')
+    
     def __init__(self, position):
-        super().__init__(position)
+        super().__init__(Game.linpic_asset, position)
         # Background
         black = Color(0, 1)
         noline = LineStyle(0, black)
         pic_asset = ImageAsset("images/backgroundexperiment.png", Frame(0, 0, 960, 672), 1, 'horizontal')
-        linpic_asset = ImageAsset("images/Game_Background_701.jpg", Frame(0, 0, 1280, 640), 1, 'horizontal')
         bg_asset = RectangleAsset(self.width, self.height, noline, black)
-        bg1 = Sprite(linpic_asset, (0,-60))
-        bg2 = Sprite(linpic_asset, (1152,-60))
+        bg1 = Sprite((0,-60))
+        bg2 = Sprite((1152,-60))
         bg1.scale = 0.9
         bg2.scale = 0.9
         Person((200,400))
