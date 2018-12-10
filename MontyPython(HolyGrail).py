@@ -116,6 +116,7 @@ class Person(Sprite):
         self.dead = True
 
 class Obstacle(Sprite):
+    
 
 class Game(App):
     """
