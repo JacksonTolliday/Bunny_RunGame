@@ -119,10 +119,32 @@ class Person(Sprite):
 class ObstacleS(Sprite):
     
     asset = ImageAsset("images/platformer_sprites_base.png",
-        Frame(0, 256, 64, 64), 8, 'horizontal')
+        Frame(0, 192, 64, 64), 8, 'horizontal')
+    asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 192, 64, 64), 8, 'horizontal')
+
     def __init__(self, position):
-        super().__init__(Obstacle.asset, position)
+        super().__init__(ObstacleS.asset, position)
+        animateosr = 0
+        animateosl = 8
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
+
+    def step(self):
+        
+class ObstacleR(Sprite):
+    
+    asset = ImageAsset("images/platformer_sprites_base.png",
+        Frame(0, 256, 64, 64), 8, 'horizontal')
+    asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 256, 64, 64), 8, 'horizontal')
+
+    def __init__(self, position):
+        super().__init__(ObstacleR.asset, position)
+        animateosr = 0
+        animateosl = 8
+        #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
+
+    def step(self):
 
 class Game(App):
     """
