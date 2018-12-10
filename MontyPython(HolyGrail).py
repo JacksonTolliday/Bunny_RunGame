@@ -117,7 +117,11 @@ class Person(Sprite):
 
 class Obstacle(Sprite):
     
-
+    asset = ImageAsset("images/platformer_sprites_base.png",
+        Frame(0, 256, 64, 64), 8, 'horizontal')
+    def __init__(self, position):
+        super().__init__(Obstacle.asset, position)
+        
 class Game(App):
     """
     Tutorial4 space game example.
