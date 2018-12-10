@@ -123,7 +123,7 @@ class Game(App):
         self.bg3 = Sprite(linpic_asset, (-1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
-        self.bg2.scale = 0.9
+        self.bg3.scale = 0.9
         print(Game.width)
         Person((200,400))
 
