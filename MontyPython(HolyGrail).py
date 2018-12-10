@@ -130,7 +130,8 @@ class ObstacleS(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
-        
+        pass
+
 class ObstacleR(Sprite):
     
     asset = ImageAsset("images/platformer_sprites_base.png",
@@ -145,6 +146,7 @@ class ObstacleR(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
+        pass
 
 class Game(App):
     """
