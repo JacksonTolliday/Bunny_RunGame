@@ -115,6 +115,8 @@ class Person(Sprite):
     def death(self, event):
         self.dead = True
 
+class Obstacle(Sprite):
+
 class Game(App):
     """
     Tutorial4 space game example.
