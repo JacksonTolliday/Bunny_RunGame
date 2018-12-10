@@ -43,10 +43,10 @@ class Person(Sprite):
 
     def step(self):
         self.tv = self.vr - self.vl
-        if self.tv > 4:
-            self.tv = 4
-        if self.tv < -4:
-            self.tv = -4
+        if self.tv > 6:
+            self.tv = 6
+        if self.tv < -6:
+            self.tv = -6
         self.y += self.vertmov
         self.tvlist.append(self.tv)
         if self.vertmov == 0:
@@ -136,10 +136,10 @@ class Game(App):
             if self.bg1.x >= 0:
                 self.bg2.x = self.bg1.x-1152
                 
-            if self.bg2.x == (1152-Game.width):
-                self.bg1.x = Game.width
-            if self.bg1.x == (1152-Game.width):
-                self.bg2.x = Game.width
+            if self.bg2.x <= 0:
+                self.bg1.x = self.bg2.x+1152
+            if self.bg1.x <= 0:
+                self.bg2.x = self.bg1.x+1152
             
 myapp = Game()
 myapp.run()
