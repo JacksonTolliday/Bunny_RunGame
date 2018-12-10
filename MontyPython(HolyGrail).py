@@ -131,9 +131,9 @@ class Game(App):
             player.step()
             self.bg1.x -= player.tv
             self.bg2.x -= player.tv
-            if self.bg2.x == 0:
+            if self.bg2.x <= 0:
                 self.bg1.x = -1152
-            if self.bg1.x == 0:
+            if self.bg1.x <= 0:
                 self.bg2.x = -1152
                 
             if self.bg2.x == (1152-Game.width):
