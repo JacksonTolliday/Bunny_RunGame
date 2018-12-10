@@ -89,7 +89,8 @@ class Person(Sprite):
                     self.animaterd += 0.25
                 else:
                     pass'''
-        collides = self.collidingWithSprites(Obstacle)
+        collides = self.collidingWithSprites(ObstacleS)
+        
         for player in collides:
             if self.tvlist[(len(self.tvlist))-2] < 0:
                 Game.bg1.x += 6
@@ -115,13 +116,14 @@ class Person(Sprite):
     def death(self, event):
         self.dead = True
 
-class Obstacle(Sprite):
+class ObstacleS(Sprite):
     
     asset = ImageAsset("images/platformer_sprites_base.png",
         Frame(0, 256, 64, 64), 8, 'horizontal')
     def __init__(self, position):
         super().__init__(Obstacle.asset, position)
-        
+        #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
+
 class Game(App):
     """
     Tutorial4 space game example.
