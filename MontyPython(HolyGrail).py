@@ -168,6 +168,7 @@ class Game(App):
         self.bg2 = Sprite(linpic_asset, (1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
+        self.tv = 0
         Person((Game.width/2,400))
         ObstacleS((800,400))
 
@@ -186,6 +187,7 @@ class Game(App):
                 self.bg1.x = self.bg2.x+1152
             if self.bg1.x <= 0:
                 self.bg2.x = self.bg1.x+1152
+            self.tv = player.tv
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
             
