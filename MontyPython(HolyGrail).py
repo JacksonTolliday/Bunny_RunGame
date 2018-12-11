@@ -135,8 +135,8 @@ class ObstacleS(Sprite):
         if self.animateosr >= 8:
             self.animateosr = 0
 
-    def spawn(self, position)
-        pass
+    '''def spawn(self, position)
+        pass'''
 
 class ObstacleR(Sprite):
     
