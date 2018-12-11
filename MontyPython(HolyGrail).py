@@ -130,7 +130,8 @@ class ObstacleS(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
-        self.x -= Person.tv
+        for player in self.getSpritesbyClass(Person):
+            self.x -= player.tv
         self.setImage(self.animateosr)
         self.animateosr += 0.2
         if self.animateosr >= 8:
