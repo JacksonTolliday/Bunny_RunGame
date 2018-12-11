@@ -130,11 +130,18 @@ class ObstacleS(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
-        self.x -= Game.tv
-        self.setImage(self.animateosr)
-        self.animateosr += 0.2
-        if self.animateosr >= 8:
-            self.animateosr = 0
+        global myapp
+        self.x -= myapp.p.tv
+        if self.tvlist[(len(self.tvlist))-2] < 0:
+            self.setImage(self.animateosl)
+            self.animateosl -= 0.2
+            if self.animateosl >= 15:
+                self.animateosl = 8
+        if self.tvlist[(len(self.tvlist))-2] > 0:
+            self.setImage(self.animateosr)
+            self.animateosr += 0.2
+            if self.animateosr >= 8:
+                self.animateosr = 0
 
 class ObstacleR(Sprite):
     
@@ -168,9 +175,8 @@ class Game(App):
         self.bg2 = Sprite(linpic_asset, (1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
-        self.tv = 0
-        Person((Game.width/2,400))
-        ObstacleS((800,400))
+        self.p = Person((Game.width/2,400))
+        self.os = ObstacleS((800,369))
 
 
     def step(self):
@@ -187,7 +193,6 @@ class Game(App):
                 self.bg1.x = self.bg2.x+1152
             if self.bg1.x <= 0:
                 self.bg2.x = self.bg1.x+1152
-            self.tv = player.tv
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
             
