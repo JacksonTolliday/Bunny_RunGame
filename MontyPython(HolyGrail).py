@@ -133,12 +133,12 @@ class ObstacleS(Sprite):
         global myapp
         self.x -= myapp.p.tv
         self.tvlist = myapp.p.tvlist
-        if self.tvlist[(len(self.tvlist))-2] < 0:
+        if self.tvlist[(len(self.tvlist))-2] > 0:
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
                 self.animateosl = 8
-        if self.tvlist[(len(self.tvlist))-2] > 0:
+        if self.tvlist[(len(self.tvlist))-2] < 0:
             self.setImage(self.animateosr)
             self.animateosr += 0.2
             if self.animateosr >= 8:
