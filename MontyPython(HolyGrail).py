@@ -93,11 +93,13 @@ class Person(Sprite):
         collides.extend(self.collidingWithSprites(ObstacleR))
         for player in collides:
             if self.tvlist[(len(self.tvlist))-2] < 0:
-                Game.bg1.x += 6
-                Game.bg2.x += 6
+                global myapp
+                myapp.bg1.x += 6
+                myapp.bg2.x += 6
             if self.tvlist[(len(self.tvlist))-2] > 0:
-                Game.bg1.x -= 6
-                Game.bg2.x -= 6
+                global myapp
+                myapp.bg1.x -= 6
+                myapp.bg2.x -= 6
             self.tv = 0
             
 
