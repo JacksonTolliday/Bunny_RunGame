@@ -125,8 +125,8 @@ class ObstacleS(Sprite):
 
     def __init__(self, position):
         super().__init__(ObstacleS.asset, position)
-        animateosr = 0
-        animateosl = 8
+        self.animateosr = 0
+        self.animateosl = 8
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
