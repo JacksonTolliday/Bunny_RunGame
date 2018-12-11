@@ -130,13 +130,11 @@ class ObstacleS(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
+        self.x -= Person.tv
         self.setImage(self.animateosr)
-        self.animateosr += 0.25
+        self.animateosr += 0.2
         if self.animateosr >= 8:
             self.animateosr = 0
-
-    '''def spawn(self, position)
-        pass'''
 
 class ObstacleR(Sprite):
     
