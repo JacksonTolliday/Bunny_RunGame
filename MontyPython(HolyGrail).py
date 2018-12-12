@@ -50,9 +50,10 @@ class Person(Sprite):
         self.y += self.vertmov
         self.tvlist.append(self.tv)
         if self.y > 400:
-            self.vertmov -= 1
+            self.vertmov += 1
             if self.y < 400:
                 self.y = 400
+                vertmov = 0
         if self.vertmov > 0:
             pass
         if self.vertmov == 0:
@@ -113,10 +114,10 @@ class Person(Sprite):
     
     def jump(self, event):
         if self.y == 400:
-            self.vertmov += 3
+            self.vertmov -= 3
 
     def drop(self, event):
-        self.vertmov -= 1
+        self.vertmov += 1
 
     def death(self, event):
         self.dead = True
