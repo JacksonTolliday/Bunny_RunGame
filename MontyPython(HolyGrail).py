@@ -49,6 +49,8 @@ class Person(Sprite):
             self.tv = -6
         self.y += self.vertmov
         self.tvlist.append(self.tv)
+        if self.y > 400:
+            self.y -= 4
         if self.vertmov == 0:
             if self.dead == False:
                 if self.tv == 0:
