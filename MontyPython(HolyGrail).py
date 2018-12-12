@@ -94,12 +94,8 @@ class Person(Sprite):
         for player in collides:
             if self.tvlist[(len(self.tvlist))-2] < 0:
                 global myapp
-                myapp.bg1.x += 6
-                myapp.bg2.x += 6
             if self.tvlist[(len(self.tvlist))-2] > 0:
                 global myapp
-                myapp.bg1.x -= 6
-                myapp.bg2.x -= 6
             self.tv = 0
             
 
@@ -179,7 +175,7 @@ class Game(App):
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
-        self.os = ObstacleS((800,369))
+        'self.os = ObstacleS((800,369))'
 
 
     def step(self):
