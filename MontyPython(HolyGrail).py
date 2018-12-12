@@ -112,8 +112,10 @@ class Person(Sprite):
         self.vr += 1
     
     def jump(self, event):
-        if self.y == 400
-        self.vertmov = 6
+        if self.y == 400:
+            self.vertmov = 6
+        else:
+            pass
 
     def drop(self, event):
         self.thrust = -1
