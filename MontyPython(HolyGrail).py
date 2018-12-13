@@ -61,7 +61,7 @@ class Person(Sprite):
             if self.dead == False:
                 if self.tv > 2:
                     self.setImage(self.animaterrj)
-                    self.animaterr += 0.25
+                    self.animaterr += 0.5
                     if self.animaterr == 34:
                         self.animaterr = 41
                 if self.tv < 0:
