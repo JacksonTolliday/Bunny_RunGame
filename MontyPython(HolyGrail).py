@@ -52,15 +52,15 @@ class Person(Sprite):
             self.tv = -6
         self.y += self.vertmov
         self.tvlist.append(self.tv)
-        if self.y < 400:
-            self.vertmov += 1
         if self.y > 400:
             self.y = 400
             vertmov = 0
         if self.y < 400:
+            self.vertmov += 1
             if self.tv > 2:
                 self.setImage(self.animaterrj)
                 self.animaterr += 0.5
+                
             '''if self.tv < 0:
                 pass
             if self.tv == 0:
