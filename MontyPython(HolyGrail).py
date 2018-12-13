@@ -55,6 +55,9 @@ class Person(Sprite):
         if self.y > 400:
             self.y = 400
             vertmov = 0
+        if self.y == 415:
+            self.y = 400
+            vertmov = 0
         if self.vertmov == 0:
             if self.dead == False:
                 if self.tv == 0:
@@ -113,7 +116,7 @@ class Person(Sprite):
     
     def jump(self, event):
         if self.y == 400:
-            self.vertmov -= 13
+            self.vertmov -= 15
 
     def drop(self, event):
         self.vertmov += 1
