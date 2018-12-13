@@ -58,7 +58,7 @@ class Person(Sprite):
             self.y = 400
             vertmov = 0
         if self.vertmov > 0 or self.y < 400:
-            if self.dead == False
+            if self.dead == False:
                 if self.tv > 2:
                     self.setImage(self.animaterrj)
                     self.animaterr += 0.25
