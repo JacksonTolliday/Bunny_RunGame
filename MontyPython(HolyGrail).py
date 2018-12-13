@@ -64,11 +64,10 @@ class Person(Sprite):
                     self.animaterr += 0.25
                     if self.animaterr == 34:
                         self.animaterr = 41
-                    
                 if self.tv < 0:
-                    
+                    pass
                 if self.tv == 0:
-                    
+                    pass
         if self.vertmov == 0 or self.y == 400:
             if self.dead == False:
                 if self.tv == 0:
