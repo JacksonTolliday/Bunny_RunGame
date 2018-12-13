@@ -58,7 +58,7 @@ class Person(Sprite):
         if self.y == 415:
             self.y = 400
             vertmov = 0
-        if self.vertmov == 0:
+        if self.vertmov == 0 or self.y == 400:
             if self.dead == False:
                 if self.tv == 0:
                     if self.tvlist[(len(self.tvlist))-2] < 0:
