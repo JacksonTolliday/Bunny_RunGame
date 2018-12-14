@@ -22,6 +22,8 @@ class Person(Sprite):
         Frame(448, 512, 64, 64), 1, 'horizontal')
     asset.append("images/platformer_sprites_base.png",
         Frame(128, 320, 64, 64), 6, 'horizontal')
+    asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 320, 64, 64), 6, 'horizontal')    
     def __init__(self, position):
         super().__init__(Person.asset, position)
         self.vl = 0
@@ -40,6 +42,7 @@ class Person(Sprite):
         self.animaterd = 0
         self.animateld = 0
         self.animaterrj = 34
+        self.animatelrj = 42
         self.tvlist = []
         self.setImage(32)
         self.dead = False
@@ -57,14 +60,14 @@ class Person(Sprite):
             vertmov = 0
         if self.y < 400:
             self.vertmov += 1
-            if self.tv > 2:
+            if self.tv > 0:
                 self.setImage(self.animaterrj)
                 self.animaterrj += 0.2
                 if self.animater == 41:
                     self.animater = 34
-            '''if self.tv < 0:
-                pass
-            if self.tv == 0:
+            if self.tv < 0:
+                
+            '''if self.tv == 0:
                 pass'''
         if self.vertmov == 0 or self.y == 400:
             if self.dead == False:
