@@ -46,10 +46,10 @@ class Person(Sprite):
 
     def step(self):
         self.tv = self.vr - self.vl
-        if self.tv > 6:
-            self.tv = 6
-        if self.tv < -6:
-            self.tv = -6
+        if self.tv > 7:
+            self.tv = 7
+        if self.tv < -7:
+            self.tv = -7
         self.y += self.vertmov
         self.tvlist.append(self.tv)
         if self.y > 400:
