@@ -42,7 +42,7 @@ class Person(Sprite):
         self.animaterd = 0
         self.animateld = 0
         self.animaterrj = 34
-        self.animatelrj = 48
+        self.animatelrj = 46
         self.tvlist = []
         self.setImage(32)
         self.dead = False
