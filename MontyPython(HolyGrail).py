@@ -199,7 +199,7 @@ class Game(App):
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
-        'self.os = ObstacleS((800,369))'
+        self.os = ObstacleS((800,369))
 
 
     def step(self):
