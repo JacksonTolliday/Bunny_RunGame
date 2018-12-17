@@ -68,7 +68,6 @@ class Person(Sprite):
             if self.tv < 0:
                 self.setImage(self.animatelrj)
                 self.animatelrj -= 0.2
-                print(self.animatelrj)
                 if self.animatelrj < 41:
                     self.animatelrj = 46
             '''if self.tv == 0:
