@@ -113,7 +113,7 @@ class Person(Sprite):
                 else:
                     pass'''
         collides = self.collidingWithSprites(ObstacleS)
-        collides.extend(self.collidingWithSprites(ObstacleR))
+        'collides.extend(self.collidingWithSprites(ObstacleR))'
         for player in collides:
             if self.tvlist[(len(self.tvlist))-2] < 0:
                 global myapp
