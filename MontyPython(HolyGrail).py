@@ -145,9 +145,9 @@ class ObstacleS(Sprite):
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 192, 64, 64), 8, 'horizontal')
     asset = ImageAsset("images/platformer_sprites_base.png",
-        Frame(0, 256, 64, 64), 8, 'horizontal')
+        Frame(0, 64, 64, 64), 8, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
-        Frame(0, 256, 64, 64), 8, 'horizontal')
+        Frame(0, 64, 64, 64), 8, 'horizontal')
 
 
     def __init__(self, position):
@@ -158,7 +158,7 @@ class ObstacleS(Sprite):
 
     def step(self):
         global myapp
-        self.x -= myapp.p.tv
+        self.x -= myapp.p.tv + 6
         self.tvlist = myapp.p.tvlist
         if self.tvlist[(len(self.tvlist))-2] > 0:
             self.setImage(self.animateosl)
