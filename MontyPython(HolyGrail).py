@@ -144,6 +144,11 @@ class ObstacleS(Sprite):
         Frame(0, 192, 64, 64), 8, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 192, 64, 64), 8, 'horizontal')
+    asset = ImageAsset("images/platformer_sprites_base.png",
+        Frame(0, 256, 64, 64), 8, 'horizontal')
+    asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 256, 64, 64), 8, 'horizontal')
+
 
     def __init__(self, position):
         super().__init__(ObstacleS.asset, position)
@@ -166,12 +171,8 @@ class ObstacleS(Sprite):
             if self.animateosr >= 8:
                 self.animateosr = 0
 
-class ObstacleR(Sprite):
+'''class ObstacleR(Sprite):
     
-    asset = ImageAsset("images/platformer_sprites_base.png",
-        Frame(0, 256, 64, 64), 8, 'horizontal')
-    asset.append("images/platformer_sprites_base -left.png",
-        Frame(0, 256, 64, 64), 8, 'horizontal')
 
     def __init__(self, position):
         super().__init__(ObstacleR.asset, position)
@@ -197,7 +198,7 @@ class ObstacleR(Sprite):
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
-                self.animateosl = 8
+                self.animateosl = 8'''
 
 class Game(App):
     """
