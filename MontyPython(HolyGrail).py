@@ -188,7 +188,7 @@ class ObstacleR(Sprite):
             left = True
         if self.tvlist[(len(self.tvlist))-2] < 0:
             right = True
-        if right == True
+        if right == True:
             self.setImage(self.animateosr)
             self.animateosr += 0.2
             if self.animateosr >= 8:
