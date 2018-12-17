@@ -158,7 +158,7 @@ class ObstacleS(Sprite):
 
     def step(self):
         global myapp
-        self.x -= myapp.p.tv + 6
+        self.x -= myapp.p.tv - 5
         self.tvlist = myapp.p.tvlist
         if self.tvlist[(len(self.tvlist))-2] > 0:
             self.setImage(self.animateosl)
@@ -217,7 +217,7 @@ class Game(App):
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
-        self.os = ObstacleS((800,369))
+        self.os = ObstacleS((0,369))
 
 
     def step(self):
