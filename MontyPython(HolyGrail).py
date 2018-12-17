@@ -177,10 +177,27 @@ class ObstacleR(Sprite):
         super().__init__(ObstacleR.asset, position)
         animateosr = 0
         animateosl = 8
+        left = False
+        right = False
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
-    def step(self):
-        pass
+        global myapp
+        self.x -= myapp.p.tv
+        self.tvlist = myapp.p.tvlist
+        if self.tvlist[(len(self.tvlist))-2] > 0:
+            left = True
+        if self.tvlist[(len(self.tvlist))-2] < 0:
+            right = True
+        if right == True
+            self.setImage(self.animateosr)
+            self.animateosr += 0.2
+            if self.animateosr >= 8:
+                self.animateosr = 0
+        if left == True:
+            self.setImage(self.animateosl)
+            self.animateosl -= 0.2
+            if self.animateosl >= 15:
+                self.animateosl = 8
 
 class Game(App):
     """
