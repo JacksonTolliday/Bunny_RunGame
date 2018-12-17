@@ -158,7 +158,7 @@ class ObstacleS(Sprite):
 
     def step(self):
         global myapp
-        self.x -= myapp.p.tv - 5
+        self.x -= myapp.p.tv - 4
         self.tvlist = myapp.p.tvlist
         if self.tvlist[(len(self.tvlist))-2] > 0:
             self.setImage(self.animateosl)
