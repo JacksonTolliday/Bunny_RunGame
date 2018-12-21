@@ -78,7 +78,6 @@ class Person(Sprite):
                     self.right = False
             '''if self.tv == 0:
                 pass'''
-        print(self.left)
         if self.vertmov == 0 or self.y == 400:
             if self.dead == False:
                 if self.tv == 0:
@@ -170,13 +169,14 @@ class ObstacleS(Sprite):
     def step(self):
         global myapp
         self.x -= myapp.p.tv - 4
-        self.tvlist = myapp.p.tvlist
-        if self.tvlist[(len(self.tvlist))-2] > 0:
+        self.left = myapp.p.left
+        self.right = myapp.p.right
+        if self.left == True:
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
                 self.animateosl = 8
-        if self.tvlist[(len(self.tvlist))-2] < 0:
+        if self.right == True:
             self.setImage(self.animateosr)
             self.animateosr += 0.2
             if self.animateosr >= 8:
