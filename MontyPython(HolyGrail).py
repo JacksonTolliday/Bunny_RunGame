@@ -46,6 +46,8 @@ class Person(Sprite):
         self.tvlist = []
         self.setImage(32)
         self.dead = False
+        self.left = False
+        self.right = True
 
     def step(self):
         self.tv = self.vr - self.vl
@@ -65,20 +67,29 @@ class Person(Sprite):
                 self.animaterrj += 0.2
                 if self.animaterrj > 40:
                     self.animaterrj = 34
+                    self.left = False
+                    self.right = True
             if self.tv < 0:
                 self.setImage(self.animatelrj)
                 self.animatelrj -= 0.2
                 if self.animatelrj < 41:
                     self.animatelrj = 46
+                    self.left = True
+                    self.right = False
             '''if self.tv == 0:
                 pass'''
+        print(self.left)
         if self.vertmov == 0 or self.y == 400:
             if self.dead == False:
                 if self.tv == 0:
                     if self.tvlist[(len(self.tvlist))-2] < 0:
                         self.setImage(33)
+                        self.left = False
+                        self.right = True
                     if self.tvlist[(len(self.tvlist))-2] > 0:
                         self.setImage(32)
+                        self.left = True
+                        self.right = False
                     else:
                         pass
                 if self.tv > 0:
@@ -170,35 +181,6 @@ class ObstacleS(Sprite):
             self.animateosr += 0.2
             if self.animateosr >= 8:
                 self.animateosr = 0
-
-'''class ObstacleR(Sprite):
-    
-
-    def __init__(self, position):
-        super().__init__(ObstacleR.asset, position)
-        animateosr = 0
-        animateosl = 8
-        left = False
-        right = False
-        #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
-
-        global myapp
-        self.x -= myapp.p.tv
-        self.tvlist = myapp.p.tvlist
-        if self.tvlist[(len(self.tvlist))-2] > 0:
-            left = True
-        if self.tvlist[(len(self.tvlist))-2] < 0:
-            right = True
-        if right == True:
-            self.setImage(self.animateosr)
-            self.animateosr += 0.2
-            if self.animateosr >= 8:
-                self.animateosr = 0
-        if left == True:
-            self.setImage(self.animateosl)
-            self.animateosl -= 0.2
-            if self.animateosl >= 15:
-                self.animateosl = 8'''
 
 class Game(App):
     """
