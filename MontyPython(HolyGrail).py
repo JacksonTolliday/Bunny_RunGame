@@ -218,8 +218,9 @@ class Game(App):
                 self.bg2.x = self.bg1.x+1152
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
-        if self.os.x > 2*Game.width:
+        if self.os.x and self.os.x > 2*Game.width:
             self.os.destroy()
+            self.os.x = 0
             
 myapp = Game()
 myapp.run()
