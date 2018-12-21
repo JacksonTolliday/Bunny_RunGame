@@ -219,7 +219,7 @@ class Game(App):
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
         if self.os.x > 2*Game.width:
-            pass
+            self.os.destroy()
             
 myapp = Game()
 myapp.run()
