@@ -186,7 +186,7 @@ class Score(Sprite):
 
     def __init__(self, position):
         super().__init__(Score.asset, position)
-
+        self.score = "Score:"
 
 class Game(App):
     """
