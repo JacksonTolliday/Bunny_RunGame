@@ -222,8 +222,8 @@ class Game(App):
             self.os.destroy()
             global Game
             if Game.Pal.left == True:
-                self.os = ObstacleS((0,369))
+                self.os = ObstacleS((-3*Game.width/4+1,369))
             if Game.Pal.right == True:
-                self.os = ObstacleS((Game.width,369))
+                self.os = ObstacleS((1.25*Game.width-1,369))
 
 Game().run()
