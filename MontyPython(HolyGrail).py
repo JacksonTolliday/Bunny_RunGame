@@ -171,6 +171,7 @@ class ObstacleS(Sprite):
         self.left = Game.Pal.left
         self.right = Game.Pal.right
         if self.left == True:
+            self.x += 2*Game.Pal.tv - 4
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
