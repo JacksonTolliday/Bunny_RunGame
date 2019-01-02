@@ -200,6 +200,7 @@ class Game(App):
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
 
+    def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
             self.bg1.x -= player.tv
