@@ -1,4 +1,4 @@
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, Label, TextAsset
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, TextAsset
 
 class Person(Sprite):
     """
