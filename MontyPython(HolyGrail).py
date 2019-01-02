@@ -202,7 +202,6 @@ class Game(App):
         self.os = ObstacleS((0,369))
         self.oss = ObstacleS((Game.width,369))
 
-
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
@@ -212,7 +211,6 @@ class Game(App):
                 self.bg1.x = self.bg2.x-1152
             if self.bg1.x >= 0:
                 self.bg2.x = self.bg1.x-1152
-                
             if self.bg2.x <= 0:
                 self.bg1.x = self.bg2.x+1152
             if self.bg1.x <= 0:
