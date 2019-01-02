@@ -182,14 +182,11 @@ class ObstacleS(Sprite):
                 self.animateosr = 0
 
 
-#class Score(Sprite):
+class Score(Sprite):
 
-#    def __init__(self, app, position):
-#        pass
-        #asset = TextAsset(app.score, style="bold 40pt Arial", width=250, fill=Color(0x00FF00, 1.0))
-        #super().__init__(asset, position)
-
-        
+    def __init__(self, app, position):
+        asset = TextAsset(app.score, style="bold 40pt Arial", width=250, fill=Color(0x00FF00, 1.0))
+        super().__init__(asset, position)
 
 class Game(App):
     """
@@ -208,9 +205,9 @@ class Game(App):
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
-        #self.os = ObstacleS((0,369))
-        #self.score = "Score:"
-        #self.scorprint = Score(self, (0,0))
+        'self.os = ObstacleS((0,369))'
+        self.score = "Score:"
+        self.scorprint = Score(self, (0,0))
 
         for player in self.getSpritesbyClass(Person):
             player.step()
@@ -226,9 +223,9 @@ class Game(App):
                 self.bg2.x = self.bg1.x+1152
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
-        if self.os.x and self.os.x > 2*Game.width:
+        '''if self.os.x and self.os.x > 2*Game.width:
             self.os.destroy()
-            self.os = ObstacleS((0,369))
+            self.os = ObstacleS((0,369))'''
 
 myapp = Game()
 myapp.run()
