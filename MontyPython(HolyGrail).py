@@ -154,9 +154,9 @@ class ObstacleS(Sprite):
         Frame(0, 192, 64, 64), 8, 'horizontal')
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 192, 64, 64), 8, 'horizontal')
-    asset = ImageAsset("images/platformer_sprites_base.png",
+    asset2 = ImageAsset("images/platformer_sprites_base.png",
         Frame(0, 64, 64, 64), 8, 'horizontal')
-    asset.append("images/platformer_sprites_base -left.png",
+    asset2.append("images/platformer_sprites_base -left.png",
         Frame(0, 64, 64, 64), 8, 'horizontal')
 
     def __init__(self, position):
