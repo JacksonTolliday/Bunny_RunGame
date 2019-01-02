@@ -1,4 +1,4 @@
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, Label, TextAsset
 
 class Person(Sprite):
     """
@@ -159,7 +159,6 @@ class ObstacleS(Sprite):
     asset.append("images/platformer_sprites_base -left.png",
         Frame(0, 64, 64, 64), 8, 'horizontal')
 
-
     def __init__(self, position):
         super().__init__(ObstacleS.asset, position)
         self.animateosr = 0
@@ -182,6 +181,13 @@ class ObstacleS(Sprite):
             if self.animateosr >= 8:
                 self.animateosr = 0
 
+class Score(Sprite):
+    asset = TextAsset(self.score, style="bold 40pt Arial", width=250, fill=Color(0x00FF00, 1.0))
+
+    def __init__(self, position):
+        super().__init__(Score.asset, position)
+
+
 class Game(App):
     """
     Tutorial4 space game example.
@@ -200,8 +206,9 @@ class Game(App):
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
         self.os = ObstacleS((0,369))
+        self.score = "Score:"
+        self.scorprint = Score((0,0))
 
-    def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
             self.bg1.x -= player.tv
