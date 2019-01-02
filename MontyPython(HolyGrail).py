@@ -217,6 +217,13 @@ class Game(App):
             obs.step()
         if self.os.x and self.os.x > 2*Game.width:
             self.os.destroy()
-            self.os = ObstacleS((0,369))
+            self.oss = ObstacleS((0,369))
+        if self.os.x and self.os.x > 2*Game.width or if self.os.x and self.os.x < 0:
+            self.os.destroy()
+            global Game
+            if Game.Pal.left = True
+                self.os = ObstacleS((0,369))
+            if Game.Pal.right = True
+                self.os = ObstacleS((Game.width,369))
 
 Game().run()
