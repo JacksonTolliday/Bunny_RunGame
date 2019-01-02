@@ -198,7 +198,7 @@ class Game(App):
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
         self.os = ObstacleS((0,369))
-        self.Pal = Person((Game.width/2,400))
+        Game.Pal = Person((Game.width/2,400))
 
         for player in self.getSpritesbyClass(Person):
             player.step()
