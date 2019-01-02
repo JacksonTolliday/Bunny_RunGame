@@ -126,9 +126,9 @@ class Person(Sprite):
         'collides.extend(self.collidingWithSprites(ObstacleR))'
         for player in collides:
             if self.tvlist[(len(self.tvlist))-2] < 0:
-                global myapp
+                global Game
             if self.tvlist[(len(self.tvlist))-2] > 0:
-                global myapp
+                global Game
             self.tv = 0
             
 
@@ -166,10 +166,10 @@ class ObstacleS(Sprite):
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
-        global myapp
-        self.x -= myapp.p.tv - 4
-        self.left = myapp.p.left
-        self.right = myapp.p.right
+        global Game
+        self.x -= Game.p.tv - 4
+        self.left = Game.p.left
+        self.right = Game.p.right
         if self.left == True:
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
