@@ -197,8 +197,8 @@ class Game(App):
         self.bg2 = Sprite(linpic_asset, (1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
-        self.Pal = Person((Game.width/2,400))
         self.os = ObstacleS((0,369))
+        self.Pal = Person((Game.width/2,400))
 
         for player in self.getSpritesbyClass(Person):
             player.step()
