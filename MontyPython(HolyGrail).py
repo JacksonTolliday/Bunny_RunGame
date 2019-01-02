@@ -200,7 +200,6 @@ class Game(App):
         self.bg2.scale = 0.9
         self.p = Person((Game.width/2,400))
         self.os = ObstacleS((0,369))
-        self.oss = ObstacleS((Game.width,369))
 
     def step(self):
         for player in self.getSpritesbyClass(Person):
