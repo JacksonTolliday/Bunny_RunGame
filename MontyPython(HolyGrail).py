@@ -167,9 +167,9 @@ class ObstacleS(Sprite):
 
     def step(self):
         global Game
-        self.x -= Game.p.tv - 4
-        self.left = Game.p.left
-        self.right = Game.p.right
+        self.x -= Game.Pal.tv - 4
+        self.left = Game.Pal.left
+        self.right = Game.Pal.right
         if self.left == True:
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
@@ -197,7 +197,7 @@ class Game(App):
         self.bg2 = Sprite(linpic_asset, (1152,-60))
         self.bg1.scale = 0.9
         self.bg2.scale = 0.9
-        self.p = Person((Game.width/2,400))
+        self.Pal = Person((Game.width/2,400))
         self.os = ObstacleS((0,369))
 
         for player in self.getSpritesbyClass(Person):
