@@ -182,11 +182,11 @@ class ObstacleS(Sprite):
                 self.animateosr = 0
 
 class Score(Sprite):
-    asset = TextAsset(Score.score, style="bold 40pt Arial", width=250, fill=Color(0x00FF00, 1.0))
+    asset = TextAsset(Game.score, style="bold 40pt Arial", width=250, fill=Color(0x00FF00, 1.0))
 
     def __init__(self, position):
         super().__init__(Score.asset, position)
-        self.score = "Score:"
+        
 
 class Game(App):
     """
