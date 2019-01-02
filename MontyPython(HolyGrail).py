@@ -218,5 +218,4 @@ class Game(App):
             self.os.destroy()
             self.os = ObstacleS((0,369))
 
-myapp = Game()
-myapp.run()
+Game().run()
