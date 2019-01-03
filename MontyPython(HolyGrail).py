@@ -210,7 +210,7 @@ class Game(App):
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
         self.score = "Score:"
-        self.scorprint = Score(self, (0,0))
+        self.scorprint = Score(self, (10,10))
 
     def step(self):
         for player in self.getSpritesbyClass(Person):
