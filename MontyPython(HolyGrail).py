@@ -182,9 +182,15 @@ class ObstacleS(Sprite):
             if self.animateosr >= 8:
                 self.animateosr = 0
 
-'''class Score(Sprite):
-    
-'''
+
+class Score(Sprite):
+
+    def __init__(self, app, position):
+        pass
+        asset = TextAsset(app.score, style="30pt Arial", width=250, fill=Color(0x00FF00, 1.0))
+        super().__init__(asset, position)
+
+
 class Game(App):
     """
     Tutorial4 space game example.
@@ -203,6 +209,8 @@ class Game(App):
         self.bg2.scale = 0.9
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
+        self.score = "Score:"
+        self.scorprint = Score(self, (0,0))
 
     def step(self):
         for player in self.getSpritesbyClass(Person):
