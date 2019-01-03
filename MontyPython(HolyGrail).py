@@ -184,7 +184,6 @@ class ObstacleS(Sprite):
 class Score(Sprite):
 
     def __init__(self, app, position):
-        pass
         asset = TextAsset(app.score, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
         global Game
@@ -214,6 +213,8 @@ class Game(App):
         self.scorprint = Score(self, (10,10))
 
     def step(self):
+        self.scorprint.destroy()
+        self.scorprint = Score(self, (10,10))
         for player in self.getSpritesbyClass(Person):
             player.step()
             self.bg1.x -= player.tv
