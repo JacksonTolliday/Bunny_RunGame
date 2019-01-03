@@ -171,7 +171,7 @@ class ObstacleS(Sprite):
         self.right = Game.Pal.right
         self.x -= Game.Pal.tv - 4
         if self.left == True:
-            self.x += Game.Pal.tv - 4 + Game.Pal.tv - 4
+            #self.x += Game.Pal.tv - 4 + Game.Pal.tv - 4
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
@@ -181,6 +181,9 @@ class ObstacleS(Sprite):
             self.animateosr += 0.2
             if self.animateosr >= 8:
                 self.animateosr = 0
+
+class Score(Sprite):
+    
 
 class Game(App):
     """
