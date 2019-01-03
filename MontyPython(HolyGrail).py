@@ -168,7 +168,7 @@ class ObstacleS(Sprite):
         global Game
         self.left = Game.Pal.left
         self.right = Game.Pal.right
-        self.x -= Game.Pal.tv - 4
+        self.x -= Game.Pal.tv - 7
         if self.left == True:
             #self.x += Game.Pal.tv - 4 + Game.Pal.tv - 4
             self.setImage(self.animateosl)
