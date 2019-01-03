@@ -182,9 +182,9 @@ class ObstacleS(Sprite):
             if self.animateosr >= 8:
                 self.animateosr = 0
 
-class Score(Sprite):
+'''class Score(Sprite):
     
-
+'''
 class Game(App):
     """
     Tutorial4 space game example.
