@@ -175,11 +175,10 @@ class ObstacleS(Sprite):
             self.animateosl -= 0.2
             if self.animateosl >= 15:
                 self.animateosl = 8"""
-        if self.right == True:
-            self.setImage(self.animateosr)
-            self.animateosr += 0.2
-            if self.animateosr >= 8:
-                self.animateosr = 0
+        self.setImage(self.animateosr)
+        self.animateosr += 0.2
+        if self.animateosr >= 8:
+            self.animateosr = 0
 
 
 class Score(Sprite):
