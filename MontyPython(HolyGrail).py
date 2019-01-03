@@ -152,29 +152,29 @@ class ObstacleS(Sprite):
     
     asset = ImageAsset("images/platformer_sprites_base.png",
         Frame(0, 192, 64, 64), 8, 'horizontal')
-    asset.append("images/platformer_sprites_base -left.png",
-        Frame(0, 192, 64, 64), 8, 'horizontal')
+    """asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 192, 64, 64), 8, 'horizontal')"""
     asset.append("images/platformer_sprites_base.png",
         Frame(0, 64, 64, 64), 8, 'horizontal')
-    asset.append("images/platformer_sprites_base -left.png",
-        Frame(0, 64, 64, 64), 8, 'horizontal')
+    """asset.append("images/platformer_sprites_base -left.png",
+        Frame(0, 64, 64, 64), 8, 'horizontal')"""
 
     def __init__(self, position):
         super().__init__(ObstacleS.asset, position)
         self.animateosr = 0
-        self.animateosl = 8
+        "self.animateosl = 8"
 
     def step(self):
         global Game
         self.left = Game.Pal.left
         self.right = Game.Pal.right
         self.x -= Game.Pal.tv - 8
-        if self.left == True:
+        """if self.left == True:
             #self.x += Game.Pal.tv - 4 + Game.Pal.tv - 4
             self.setImage(self.animateosl)
             self.animateosl -= 0.2
             if self.animateosl >= 15:
-                self.animateosl = 8
+                self.animateosl = 8"""
         if self.right == True:
             self.setImage(self.animateosr)
             self.animateosr += 0.2
