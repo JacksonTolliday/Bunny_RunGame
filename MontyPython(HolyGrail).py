@@ -187,7 +187,9 @@ class Score(Sprite):
         pass
         asset = TextAsset(app.score, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
-
+        global Game
+        if len(list(Game.Pal.collidingWithSprites(ObstacleS))) > 1:
+            Game.x -= 1
 
 class Game(App):
     """
