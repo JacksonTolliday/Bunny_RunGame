@@ -187,7 +187,7 @@ class Score(Sprite):
 
     def __init__(self, app, position):
         pass
-        asset = TextAsset(app.score, style="30pt Arial", width=250, fill=Color(0x00FF00, 1.0))
+        asset = TextAsset(app.score, style="30pt Arial", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
 
 
