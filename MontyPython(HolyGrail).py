@@ -191,6 +191,8 @@ class Score(Sprite):
         global Game
         if len(list(Game.Pal.collidingWithSprites(ObstacleS))) > 1:
             Game.x -= 1
+            Game.scorprint.destroy()
+            Game.scorprint = Score(self, (10,10))
 
 class Game(App):
     """
