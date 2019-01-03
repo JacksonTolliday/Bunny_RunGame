@@ -179,13 +179,15 @@ class ObstacleS(Sprite):
         self.animateosr += 0.2
         if self.animateosr >= 16:
             self.animateosr = 8
-
+            
 
 class Score(Sprite):
 
     def __init__(self, app, position):
         asset = TextAsset(app.score, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
+        
+    def step(self):
         global Game
         if len(list(Game.Pal.collidingWithSprites(ObstacleS))) > 1:
             Game.x -= 1
@@ -213,10 +215,10 @@ class Game(App):
         self.scorprint = Score(self, (10,10))
 
     def step(self):
-        self.scorprint.destroy()
-        self.scorprint = Score(self, (10,10))
         for player in self.getSpritesbyClass(Person):
             player.step()
+        for score in self.getSpritesbyClass(Score):
+            score.step()
             self.bg1.x -= player.tv
             self.bg2.x -= player.tv
             if self.bg2.x >= 0:
