@@ -161,7 +161,7 @@ class ObstacleS(Sprite):
 
     def __init__(self, position):
         super().__init__(ObstacleS.asset, position)
-        self.animateosr = 0
+        self.animateosr = 8
         "self.animateosl = 8"
 
     def step(self):
@@ -177,8 +177,8 @@ class ObstacleS(Sprite):
                 self.animateosl = 8"""
         self.setImage(self.animateosr)
         self.animateosr += 0.2
-        if self.animateosr >= 8:
-            self.animateosr = 0
+        if self.animateosr >= 16:
+            self.animateosr = 8
 
 
 class Score(Sprite):
