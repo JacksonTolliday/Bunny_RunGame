@@ -163,13 +163,13 @@ class ObstacleS(Sprite):
         super().__init__(ObstacleS.asset, position)
         self.animateosr = 0
         self.animateosl = 8
+        global Game
+        self.left = Game.Pal.left
+        self.right = Game.Pal.right
         #ok, so 2 types of obstacles; 1 runs the other doesn't. simple enough.
 
     def step(self):
-        global Game
         self.x -= Game.Pal.tv - 4
-        self.left = Game.Pal.left
-        self.right = Game.Pal.right
         if self.left == True:
             self.x += Game.Pal.tv - 4 + Game.Pal.tv - 4
             self.setImage(self.animateosl)
