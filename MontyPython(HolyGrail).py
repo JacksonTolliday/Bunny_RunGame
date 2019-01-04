@@ -187,12 +187,7 @@ class Score(Sprite):
         asset = TextAsset(app.score, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
         
-    def step(self):
-        global Game
-        if len(list(Game.Pal.collidingWithSprites(Game.os))) > 1:
-            Game.x -= 1
-            Game.scorprint.destroy()
-            Game.scorprint = Score(self, (10,10))
+
 
 class Game(App):
     """
@@ -219,18 +214,20 @@ class Game(App):
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
-        for score in self.getSpritesbyClass(Score):
-            score.step()
-            self.bg1.x -= player.tv
-            self.bg2.x -= player.tv
-            if self.bg2.x >= 0:
-                self.bg1.x = self.bg2.x-1152
-            if self.bg1.x >= 0:
-                self.bg2.x = self.bg1.x-1152
-            if self.bg2.x <= 0:
-                self.bg1.x = self.bg2.x+1152
-            if self.bg1.x <= 0:
-                self.bg2.x = self.bg1.x+1152
+        if len(list(self.Pal.collidingWithSprites(self.os))) > 1:
+            self.x -= 1
+            self.scorprint.destroy()
+            self.scorprint = Score(self, (10,10))
+        self.bg1.x -= player.tv
+        self.bg2.x -= player.tv
+        if self.bg2.x >= 0:
+            self.bg1.x = self.bg2.x-1152
+        if self.bg1.x >= 0:
+            self.bg2.x = self.bg1.x-1152
+        if self.bg2.x <= 0:
+            self.bg1.x = self.bg2.x+1152
+        if self.bg1.x <= 0:
+            self.bg2.x = self.bg1.x+1152
         for obs in self.getSpritesbyClass(ObstacleS):
             obs.step()
         if self.os.x and self.os.x > 2*Game.width:
