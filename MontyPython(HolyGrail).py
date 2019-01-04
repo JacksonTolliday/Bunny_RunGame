@@ -189,7 +189,7 @@ class Score(Sprite):
         
     def step(self):
         global Game
-        if len(list(Game.Pal.collidingWithSprites(ObstacleS))) > 1:
+        if len(list(Game.Pal.collidingWithSprites(Game.os))) > 1:
             Game.x -= 1
             Game.scorprint.destroy()
             Game.scorprint = Score(self, (10,10))
