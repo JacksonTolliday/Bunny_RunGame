@@ -212,7 +212,7 @@ class Game(App):
         self.bg2.scale = 0.9
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
-        self.x = 0
+        self.x = 10
         self.score = "Score: "+str(self.x)
         self.scorprint = Score(self, (10,10))
 
