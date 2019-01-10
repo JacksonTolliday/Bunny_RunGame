@@ -221,6 +221,7 @@ class Game(App):
                 self.score = "Score: "+str(self.x)
                 self.scorprint.destroy()
                 self.scorprint = Score(self, (10,10))
+                self.steprun +=1
         else:
             self.steprun += 1
         if self.steprun == 16:
