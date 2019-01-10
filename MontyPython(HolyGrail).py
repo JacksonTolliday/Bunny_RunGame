@@ -220,7 +220,7 @@ class Game(App):
             self.sc += 1
         if self.Pal.collidingWith(self.os) == True:
             self.sc = 0
-        if self.sc == 200:
+        if self.sc == 150:
             self.x += 1
             self.score = "Score: "+str(self.x)
             self.scorprint.destroy()
