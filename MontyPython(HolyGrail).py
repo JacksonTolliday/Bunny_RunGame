@@ -225,6 +225,7 @@ class Game(App):
             self.score = "Score: "+str(self.x)
             self.scorprint.destroy()
             self.scorprint = Score(self, (10,10))
+            self.sc = 0
         if self.steprun == 0:
             if self.Pal.collidingWith(self.os) == True:
                 self.x -= 1
