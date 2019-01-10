@@ -236,10 +236,6 @@ class Game(App):
             self.oss = ObstacleS((0,369))
         if self.os.x and self.os.x > 1.25*Game.width or self.os.x and self.os.x < -3*Game.width/4:
             self.os.destroy()
-            global Game
-            if Game.Pal.left == True:
-                self.os = ObstacleS((-3*Game.width/4+1,369))
-            if Game.Pal.right == True:
-                self.os = ObstacleS((1.25*Game.width-1,369))
+            self.os = ObstacleS((-3*Game.width/4+1,369))
 
 Game().run()
