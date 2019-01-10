@@ -212,7 +212,7 @@ class Game(App):
         self.scorprint = Score(self, (10,10))
 
     def step(self):
-        print(self.score)
+        print(self.x)
         for player in self.getSpritesbyClass(Person):
             player.step()
         if self.Pal.collidingWith(self.os) == True:
