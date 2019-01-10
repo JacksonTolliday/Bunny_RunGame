@@ -215,7 +215,7 @@ class Game(App):
         print(self.score)
         for player in self.getSpritesbyClass(Person):
             player.step()
-        if len(list(self.Pal.collidingWithSprites(self.os))) > 1:
+        if self.Pal.collidingWith(self.os))) == True
             self.x -= 1
             self.scorprint.destroy()
             self.scorprint = Score(self, (10,10))
