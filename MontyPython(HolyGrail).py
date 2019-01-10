@@ -207,7 +207,7 @@ class Game(App):
         self.bg2.scale = 0.9
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
-        self.x = 0
+        self.x = 5
         self.score = "Score: "+str(self.x)
         self.scorprint = Score(self, (10,10))
         self.steprun = 0
@@ -220,7 +220,7 @@ class Game(App):
             self.sc += 1
         if self.Pal.collidingWith(self.os) == True:
             self.sc = 0
-        if self.sc == 150:
+        if self.sc == 160:
             self.x += 1
             self.score = "Score: "+str(self.x)
             self.scorprint.destroy()
