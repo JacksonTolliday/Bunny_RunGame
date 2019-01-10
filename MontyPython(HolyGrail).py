@@ -211,10 +211,20 @@ class Game(App):
         self.score = "Score: "+str(self.x)
         self.scorprint = Score(self, (10,10))
         self.steprun = 0
+        self.sc = 0
 
     def step(self):
         for player in self.getSpritesbyClass(Person):
             player.step()
+        if self.Pal.collidingWith(self.os) == False:
+            self.sc += 1
+        if self.Pal.collidingWith(self.os) == True:
+            self.sc = 0
+        if self.sc == 111:
+            self.x += 1
+            self.score = "Score: "+str(self.x)
+            self.scorprint.destroy()
+            self.scorprint = Score(self, (10,10))
         if self.steprun == 0:
             if self.Pal.collidingWith(self.os) == True:
                 self.x -= 1
