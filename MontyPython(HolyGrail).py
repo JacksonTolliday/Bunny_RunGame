@@ -191,13 +191,13 @@ class Score(Sprite):
 class Lives(Sprite):
 
     def __init__(self, app, position):
-        asset = TextAsset(app.lives, style="40pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
+        asset = TextAsset(app.lives, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
     
 class End(Sprite):
 
     def __init__(self, app, position):
-        asset = TextAsset('Game Over!', style="30pt Comic Sans", width=250, fill=Color(0x800000, 1.0))
+        asset = TextAsset('Game Over!', style="40pt Comic Sans", width=250, fill=Color(0x800000, 1.0))
         super().__init__(asset, position)
 
 class Game(App):
