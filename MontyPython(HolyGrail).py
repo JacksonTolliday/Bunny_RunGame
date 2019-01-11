@@ -266,5 +266,5 @@ class Game(App):
                 self.os.destroy()
                 self.os = ObstacleS((-3*Game.width/4+1,369))
         else:
-            print(Game Over!)
+            print('Game Over!')
 Game().run()
