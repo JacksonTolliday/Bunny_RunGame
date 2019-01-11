@@ -188,6 +188,12 @@ class Score(Sprite):
         super().__init__(asset, position)
         
 
+class Lives(Sprite):
+
+    def __init__(self, app, position):
+        asset = TextAsset(app.lives, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
+        super().__init__(asset, position)
+    
 
 class Game(App):
     """
@@ -207,8 +213,11 @@ class Game(App):
         self.bg2.scale = 0.9
         Game.os = ObstacleS((0,369))
         Game.Pal = Person((Game.width/2,400))
-        self.x = 5
+        self.x = 0
         self.score = "Score: "+str(self.x)
+        self.l = 5
+        self.lives = "Lives: "+str(self.l)
+        self.livprint = Lives(self, (Game.width-260,10))
         self.scorprint = Score(self, (10,10))
         self.steprun = 0
         self.sc = 0
@@ -229,9 +238,9 @@ class Game(App):
         if self.steprun == 0:
             if self.Pal.collidingWith(self.os) == True:
                 self.x -= 1
-                self.score = "Score: "+str(self.x)
-                self.scorprint.destroy()
-                self.scorprint = Score(self, (10,10))
+                self.lives = "Lives: "+str(self.l)
+                self.livprint.destroy()
+                self.livprint = Lives(self, (Game.width-260,10))
                 self.steprun +=1
         else:
             self.steprun += 1
