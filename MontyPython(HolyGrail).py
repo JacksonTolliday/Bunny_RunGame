@@ -194,6 +194,11 @@ class Lives(Sprite):
         asset = TextAsset(app.lives, style="30pt Comic Sans", width=250, fill=Color(0x660033, 1.0))
         super().__init__(asset, position)
     
+class End(Sprite):
+
+    def __init__(self, app, position):
+        asset = TextAsset('Game Over!', style="30pt Comic Sans", width=250, fill=Color(0x800000, 1.0))
+        super().__init__(asset, position)
 
 class Game(App):
     """
@@ -267,4 +272,5 @@ class Game(App):
                 self.os = ObstacleS((-3*Game.width/4+1,369))
         else:
             print('Game Over!')
+
 Game().run()
