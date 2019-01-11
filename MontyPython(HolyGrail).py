@@ -237,7 +237,7 @@ class Game(App):
             self.sc = 0
         if self.steprun == 0:
             if self.Pal.collidingWith(self.os) == True:
-                self.x -= 1
+                self.l -= 1
                 self.lives = "Lives: "+str(self.l)
                 self.livprint.destroy()
                 self.livprint = Lives(self, (Game.width-260,10))
