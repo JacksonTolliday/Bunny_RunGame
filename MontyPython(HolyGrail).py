@@ -197,7 +197,7 @@ class Lives(Sprite):
 class End(Sprite):
 
     def __init__(self, app, position):
-        asset = TextAsset('Game Over!', style="50pt Comic Sans", width=400, fill=Color(0x800000, 1.0))
+        asset = TextAsset('Game Over!', style="51pt Comic Sans", width=400, fill=Color(0x800000, 1.0))
         super().__init__(asset, position)
 
 class Game(App):
