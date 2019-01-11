@@ -265,5 +265,6 @@ class Game(App):
             if self.os.x and self.os.x > 1.25*Game.width or self.os.x and self.os.x < -3*Game.width/4:
                 self.os.destroy()
                 self.os = ObstacleS((-3*Game.width/4+1,369))
-
+        else:
+            print(Game Over!)
 Game().run()
